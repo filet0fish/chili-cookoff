@@ -1,0 +1,16 @@
+
+.content-padding {
+  padding: 1em;
+}
+
+#chili-chat {
+  width:100%;
+  height: 200px;
+  position: fixed;
+  bottom: 0;
+
+  background: #ccc;
+}
+#chili-chat .chatbox {
+  height: 175px;
+}
