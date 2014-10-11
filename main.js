@@ -45,9 +45,24 @@ chili.controller('HomeController', ['$scope', 'simpleLogin', function($scope, au
 
 }]);
 
-chili.controller('DetailController', ['$scope', '$firebase', 'firebaseUri', function($scope, $firebase, firebaseUri) {
-  var ref = new Firebase(firebaseUri + '/entries');
+chili.controller('DetailController', ['$scope', '$routeParams', '$firebase', 'firebaseUri', function($scope, $routeParams, $firebase, firebaseUri) {
+  var ref = new Firebase(firebaseUri + '/entries/' + $routeParams.chiliId);
   var sync = $firebase(ref);
+  var detail = sync.$asObject();
+
+  $scope.detail = detail;
+  $scope.isRated = false;
+
+  angular.forEach(detail.rating, function(r) {
+    if (r.username === $scope.auth.username) {
+      $scope.rating = r;
+      $scope.isRated = true;
+    }
+  });
+
+  $scope.rate = function () {
+    console.log('Set rating for user');
+  };
 
 }]);
 
