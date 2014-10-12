@@ -1,19 +1,21 @@
 
-
-<form class="add-form content-padding">
-<div class="form-group">
-  <input type="text" ng-model="title" placeholder="Title" />
+<div class="content-padding">
+  <h1>Add Moar Chili</h1>
+  <form class="add-form">
+    <div class="form-group">
+      <input type="text" ng-model="title" placeholder="Title" />
+    </div>
+    <div class="form-group">
+      <textarea ng-model="description" placeholder="Description" rows="5"></textarea>
+    </div>
+    <div class="form-group">
+      <input type="text" ng-model="owner" placeholder="Entrant Name" />
+    </div>
+    <div class="form-group">
+      <input type="text" ng-model="photo" placeholder="Photo url" />
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-default" ng-click="addChili()">Add</button>
+    </div>
+  </form>
 </div>
-<div class="form-group">
-  <textarea ng-model="description" placeholder="Description" rows="5"></textarea>
-</div>
-<div class="form-group">
-  <input type="text" ng-model="owner" placeholder="Entrant Name" />
-</div>
-<div class="form-group">
-  <input type="text" ng-model="photo" placeholder="Photo url" />
-</div>
-<div class="form-group">
-  <button type="submit" class="btn btn-default" ng-click="addChili()">Add</button>
-</div>
-</form>

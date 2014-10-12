@@ -89,7 +89,11 @@ chili.controller('HomeController', ['$scope', '$firebase', 'firebaseUri', functi
   $scope.entries = syncObject;
 
   $scope.formatRating = function (rating) {
-    return (rating.presentation + rating.aroma + rating.texture + rating.taste + rating.aftertaste) + '/50';
+    if (rating) {
+      return (rating.presentation + rating.aroma + rating.texture + rating.taste + rating.aftertaste) + '/50';
+    } else {
+      return '';
+    }
   };
 
 }]);
@@ -127,10 +131,6 @@ chili.controller("ChatController", ['$scope', '$firebase', 'firebaseUri', functi
   var sync = $firebase(ref.endAt().limit(500));
 
   $scope.messages = sync.$asArray();
-
-  ref.on('child_added', function () {
-    console.log('Ding');
-  });
 
   $scope.postChat = function() {
     $scope.messages.$add({user: $scope.auth.username, text: $scope.chatInput});

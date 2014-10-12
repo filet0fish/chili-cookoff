@@ -8,33 +8,33 @@
         {{detail.description}}
       </div>
 
-      <form role="form">
+      <form name="form" role="form">
         <div class="form-group">
           <label>Presentation / Color: {{rating.presentation}}</label>
-          <input type="range" ng-model="rating.presentation" min="0" max="10" step="1" to-number ng-disabled="isRated" />
+          <input type="range" ng-model="rating.presentation" min="0" max="10" step="1" required to-number ng-disabled="isRated" />
         </div>
         <div class="form-group">
           <label>Aroma: {{rating.aroma}}</label>
-          <input type="range" ng-model="rating.aroma" min="0" max="10" step="1" to-number ng-disabled="isRated" />
+          <input type="range" ng-model="rating.aroma" min="0" max="10" step="1" required to-number ng-disabled="isRated" />
         </div>
         <div class="form-group">
           <label>Texture: {{rating.texture}}</label>
-          <input type="range" ng-model="rating.texture" min="0" max="10" step="1" to-number ng-disabled="isRated" />
+          <input type="range" ng-model="rating.texture" min="0" max="10" step="1" required to-number ng-disabled="isRated" />
         </div>
         <div class="form-group">
           <label>Taste: {{rating.taste}}</label>
-          <input type="range" ng-model="rating.taste" min="0" max="10" step="1" to-number ng-disabled="isRated" />
+          <input type="range" ng-model="rating.taste" min="0" max="10" step="1" required to-number ng-disabled="isRated" />
         </div>
         <div class="form-group">
           <label>After Taste: {{rating.aftertaste}}</label>
-          <input type="range" ng-model="rating.aftertaste" min="0" max="10" step="1" to-number ng-disabled="isRated" />
+          <input type="range" ng-model="rating.aftertaste" min="0" max="10" step="1" required to-number ng-disabled="isRated" />
         </div>
         <div class="form-group">
-          <label>Comments:</label>
+          <label>Tasting Notes:</label>
           <textarea ng-model="rating.commentary" ng-disabled="isRated"></textarea>
         </div>
         <div style="text-align:center">
-          <button type="submit" class="btn btn-default btn-lg" ng-click="rate()" ng-hide="isRated">Rate</button>
+          <button type="submit" class="btn btn-default btn-lg" ng-click="rate()" ng-disabled="form.$invalid" ng-hide="isRated">Rate</button>
         </div>
       </form>
 
