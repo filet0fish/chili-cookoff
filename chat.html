@@ -1,5 +1,21 @@
 
   <div id="chili-chat">
-    <div class="chatbox" ng-bind="chatlog"></div>
-    <input type="text" model="chatInput" />
+
+    <form>
+      <div class="input-group">
+        <input type="text" ng-model="chatInput" />
+        <span class="input-group-btn">
+          <button type="submit" class="btn btn-default" ng-disabled="chatInput.length < 1" ng-click="postChat()">
+            <span class="glyphicon glyphicon-comment"></span>
+          </button>
+        </span>
+      </div>
+    </form>
+
+    <div class="chatbox">
+      <div class="row" ng-repeat="message in messages | orderBy:'-$id' ">
+        <div class="col-xs-3 username" ng-bind="message.user"></div>
+        <div class="col-xs-9 message" ng-bind="message.text"></div>
+      </div>
+    </div>
   </div>

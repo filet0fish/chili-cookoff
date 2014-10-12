@@ -2,11 +2,15 @@
 
 <div class="row content-padding">
   <div class="col-xs-12">
-    <h1>Login</h1>
+    <h1>Chili Cookoff Login</h1>
 
     <form role="form">
-      <input type="text" class="form-control" ng-model="auth.username" ng-required="true" mg-minlength="4" placeholder="Enter name">
-      <button type="submit" class="btn btn-default" ng-click="enter()" ng-disabled="auth.username.length < 4">Submit</button>
+      <div class="input-group">
+        <input type="text" class="form-control" ng-model="username" ng-required="true" mg-minlength="4" placeholder="Enter name">
+        <span class="input-group-btn">
+          <button type="submit" class="btn btn-default" ng-click="enter()" ng-disabled="username.length < 4"><span class="glyphicon glyphicon-thumbs-up" /></button>
+        </span>
+      </div>
     </form>
   </div>
 </div>
@@ -14,6 +18,10 @@
 
 
 <!--
+
+<span class="glyphicon glyphicon-fire warning" />
+
+
     <div ng-show="auth.firebase.user">
       <p>Hello, {{auth.user.displayName}}</p>
       <button ng-click="auth.firebase.$logout()">Logout</button>

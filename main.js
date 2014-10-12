@@ -1,41 +1,77 @@
-var chili = angular.module("chiliApp", ["firebase", "ngRoute"]);
+var chili = angular.module("chiliApp", ["firebase", "ngRoute", 'ngCookies']);
 
 chili.constant('firebaseUri', 'https://dazzling-inferno-5752.firebaseio.com');
 
-chili.factory("simpleLogin", ["$firebaseSimpleLogin", 'firebaseUri', function($firebaseSimpleLogin, uri) {
-  var ref = new Firebase(uri);
-  return {
-    firebase: $firebaseSimpleLogin(ref),
-    username: ''
-  };
+chili.factory("simpleLogin", ["$firebaseSimpleLogin", 'firebaseUri', '$cookies', function($firebaseSimpleLogin, uri, $cookies) {
+  var ref = new Firebase(uri),
+    instance = {
+      firebase: $firebaseSimpleLogin(ref),
+      username: $cookies.username,
+      login: function (user) {
+        $cookies.username = user;
+        instance.username = user;
+      }
+    };
+  return instance;
 }]);
 
 
 chili.config(function($routeProvider, $locationProvider) {
 
+   var requireAuthentication = function () {
+        return {
+            load: ['$q', '$location', 'simpleLogin', function ($q, $location, auth) {
+                if (auth.username) {
+                    var deferred = $q.defer();
+                    deferred.resolve();
+                    return deferred.promise;
+                } else {
+                    $location.path('/Login');
+                    return $q.reject("NO AUTH");
+                }
+            }]
+        };
+    };
+
   $routeProvider.when('/Chili/:chiliId', {
     templateUrl: 'detail.html',
-    controller: 'DetailController'
+    controller: 'DetailController',
+    resolve: requireAuthentication()
+  })
+  .when('/Chat', {
+    templateUrl: 'chat.html',
+    controller: 'ChatController',
+    resolve: requireAuthentication()
   })
   .when('/Login', {
     templateUrl: 'login.html',
     controller: 'LoginController'
   })
+  .when('/Add', {
+    templateUrl: 'add.html',
+    controller: 'AddController'
+  })
   .otherwise({
     templateUrl: 'home.html',
-    controller: 'HomeController'
+    controller: 'HomeController',
+    resolve: requireAuthentication()
   });
 
-  //$locationProvider.html5Mode(true);
 });
 
-chili.controller('LoginController', ['$scope', '$location', 'simpleLogin', '$rootScope', function($scope, $location, simpleLogin, $root) {
+chili.run(['simpleLogin', '$rootScope', function (simpleLogin, $root) {
   $root.auth = simpleLogin;
+}]);
+
+chili.controller('LoginController', ['$scope', '$location', 'simpleLogin', function($scope, $location, simpleLogin) {
 
   $scope.username = simpleLogin.username;
 
   $scope.enter = function () {
-    $location.path('/Home');
+    if ($scope.username) {
+      simpleLogin.login($scope.username);
+      $location.path('/Home');
+    }
   }
 }]);
 
@@ -53,39 +89,87 @@ chili.controller('DetailController', ['$scope', '$routeParams', '$firebase', 'fi
   $scope.detail = detail;
   $scope.isRated = false;
 
-  angular.forEach(detail.rating, function(r) {
-    if (r.username === $scope.auth.username) {
-      $scope.rating = r;
-      $scope.isRated = true;
+  detail.$loaded(function () {
+    if (detail.rating && detail.rating[$scope.auth.username]) {
+        $scope.rating = detail.rating[$scope.auth.username];
+        $scope.isRated = true;
     }
   });
 
   $scope.rate = function () {
-    console.log('Set rating for user');
+
+    if (!detail.rating)
+      detail.rating = {};
+
+    detail.rating[$scope.auth.username] = $scope.rating;
+    detail.$save();
+
+    $scope.isRated = true;
   };
 
 }]);
 
-chili.controller("ChiliChat", ['$scope', '$firebase', 'firebaseUri', function($scope, $firebase, firebaseUri) {
+chili.controller("ChatController", ['$scope', '$firebase', 'firebaseUri', function($scope, $firebase, firebaseUri) {
   var ref = new Firebase(firebaseUri + '/chat');
-  var sync = $firebase(ref);
+  var sync = $firebase(ref.endAt().limit(500));
 
-  var syncObject = sync.$asObject();
+  $scope.messages = sync.$asArray();
 
-  syncObject.$bindTo($scope, "data");
+  ref.on('child_added', function () {
+    console.log('Ding');
+  });
+
+  $scope.postChat = function() {
+    $scope.messages.$add({user: $scope.auth.username, text: $scope.chatInput});
+
+    $scope.chatInput = '';
+  };
+
 }]);
 
-chili.controller("ChiliList", function($scope, $firebase) {
+chili.controller("ChiliList", ['$scope', '$firebase', 'firebaseUri', function($scope, $firebase, firebaseUri) {
 
-  var ref = new Firebase("https://dazzling-inferno-5752.firebaseio.com/entries");
+  var ref = new Firebase(firebaseUri + "/entries");
   var sync = $firebase(ref);
 
   var syncObject = sync.$asArray();
 
-  console.dir(syncObject);
-
   $scope.entries = syncObject;
 
+}]);
+
+
+chili.controller("AddController", ['$scope', '$firebase', 'firebaseUri', function($scope, $firebase, firebaseUri) {
+
+  var ref = new Firebase(firebaseUri + "/entries");
+  var sync = $firebase(ref);
+
+  $scope.addChili = function () {
+
+    sync.$push({
+      title: $scope.title,
+      description: $scope.description,
+      owner: $scope.owner,
+      photo: $scope.photo
+    })
+
+    $scope.title = '';
+    $scope.description = '';
+    $scope.owner = '';
+    $scope.photo = '';
+  };
+
+}]);
+
+
+// Workaround for angular not supporting range type inpurts
+chili.directive('toNumber', function () {
+    return {
+      require: 'ngModel',
+      link: function (scope, elem, attrs, ctrl) {
+          ctrl.$parsers.push(function (value) {
+            return parseInt(value || '', 10);
+          });
+        }
+    };
 });
-
-
