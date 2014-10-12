@@ -75,8 +75,18 @@ chili.controller('LoginController', ['$scope', '$location', 'simpleLogin', funct
   }
 }]);
 
-chili.controller('HomeController', ['$scope', function($scope) {
+chili.controller('HomeController', ['$scope', '$firebase', 'firebaseUri', function($scope, $firebase, firebaseUri) {
 
+  var ref = new Firebase(firebaseUri + "/entries");
+  var sync = $firebase(ref);
+
+  var syncObject = sync.$asArray();
+
+  $scope.entries = syncObject;
+
+  $scope.formatRating = function (rating) {
+    return (rating.presentation + rating.aroma + rating.texture + rating.taste + rating.aftertaste) + '/50';
+  };
 
 }]);
 
@@ -122,21 +132,6 @@ chili.controller("ChatController", ['$scope', '$firebase', 'firebaseUri', functi
     $scope.messages.$add({user: $scope.auth.username, text: $scope.chatInput});
 
     $scope.chatInput = '';
-  };
-
-}]);
-
-chili.controller("ChiliList", ['$scope', '$firebase', 'firebaseUri', function($scope, $firebase, firebaseUri) {
-
-  var ref = new Firebase(firebaseUri + "/entries");
-  var sync = $firebase(ref);
-
-  var syncObject = sync.$asArray();
-
-  $scope.entries = syncObject;
-
-  $scope.formatRating = function (rating) {
-    return (rating.presentation + rating.aroma + rating.texture + rating.taste + rating.aftertaste) + '/50';
   };
 
 }]);
