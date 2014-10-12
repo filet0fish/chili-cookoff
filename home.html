@@ -7,6 +7,8 @@
           </a>
           <div class="media-body">
             <h4 class="media-heading" ng-bind="item.title"></h4>
+            <a ng-hide="item.rating[auth.username]" ng-href="#/Chili/{{item.$id}}">Rate it!</a>
+            <div ng-show="item.rating[auth.username]">Rated: {{formatRating(item.rating[auth.username])}}</div>
           </div>
         </li>
         <li ng-if="entries.length == 0">No Chili found. Somebody start cooking!</li>

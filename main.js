@@ -75,9 +75,8 @@ chili.controller('LoginController', ['$scope', '$location', 'simpleLogin', funct
   }
 }]);
 
-chili.controller('HomeController', ['$scope', 'simpleLogin', function($scope, auth) {
+chili.controller('HomeController', ['$scope', function($scope) {
 
-  $scope.auth = auth;
 
 }]);
 
@@ -135,6 +134,10 @@ chili.controller("ChiliList", ['$scope', '$firebase', 'firebaseUri', function($s
   var syncObject = sync.$asArray();
 
   $scope.entries = syncObject;
+
+  $scope.formatRating = function (rating) {
+    return (rating.presentation + rating.aroma + rating.texture + rating.taste + rating.aftertaste) + '/50';
+  };
 
 }]);
 

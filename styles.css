@@ -1,11 +1,19 @@
 
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,200);
+
 body {
   background: #F2F2F2; /* Alt: #D1DBBD */
+  font-family: 'Raleway', sans-serif;
 }
 
 h1, h2, h3 {
   color: #400101;
   border-bottom: 1px solid #590202;
+}
+
+.add-form { margin-top: 1em; }
+.add-form input, .add-form textarea {
+  width: 100%;
 }
 
 .content-padding {
@@ -54,5 +62,12 @@ h1, h2, h3 {
   background: rgba(250,250,250,0.85);
   border-radius: 0.5em;
 }
+.chili-detail textarea {
+  display: block;
+  width: 100%;
+  height: 4em;
+}
 
-
+.nav-pills>li+li {
+  margin-left: 1em;
+}

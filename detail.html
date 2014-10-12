@@ -1,5 +1,5 @@
 
-<div class="row" style="background: url('{{detail.photo}}'); background-size:contain;')">
+<div class="row" style="background: url('{{detail.photo}}'); background-size:cover;')">
   <div class="col-xs-12">
 
     <div class="chili-detail content-padding">
@@ -28,6 +28,10 @@
         <div class="form-group">
           <label>After Taste: {{rating.aftertaste}}</label>
           <input type="range" ng-model="rating.aftertaste" min="0" max="10" step="1" to-number ng-disabled="isRated" />
+        </div>
+        <div class="form-group">
+          <label>Comments:</label>
+          <textarea ng-model="rating.commentary" ng-disabled="isRated"></textarea>
         </div>
         <div style="text-align:center">
           <button type="submit" class="btn btn-default btn-lg" ng-click="rate()" ng-hide="isRated">Rate</button>
