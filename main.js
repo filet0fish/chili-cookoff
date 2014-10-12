@@ -51,6 +51,10 @@ chili.config(function($routeProvider, $locationProvider) {
     templateUrl: 'add.html',
     controller: 'AddController'
   })
+  .when('/Results', {
+    templateUrl: 'results.html',
+    controller: 'ResultsController'
+  })
   .otherwise({
     templateUrl: 'home.html',
     controller: 'HomeController',
@@ -157,6 +161,80 @@ chili.controller("AddController", ['$scope', '$firebase', 'firebaseUri', functio
     $scope.photo = '';
   };
 
+}]);
+
+
+chili.controller('ResultsController', ['$scope', '$firebase', 'firebaseUri', function($scope, $firebase, firebaseUri) {
+
+  var ref = new Firebase(firebaseUri + "/entries");
+  var sync = $firebase(ref);
+
+  var list = sync.$asArray();
+
+  var sum = function (result, value, key) {
+        return result + ((value) ? value : 0);
+      },
+      avg = function (item) {
+        var totals = {
+          presentation: _.chain(item.rating).pluck('presentation').reduce(sum, 0).value(),
+          aroma: _.chain(item.rating).pluck('aroma').reduce(sum, 0).value(),
+          taste: _.chain(item.rating).pluck('taste').reduce(sum, 0).value(),
+          texture: _.chain(item.rating).pluck('texture').reduce(sum, 0).value(),
+          aftertaste: _.chain(item.rating).pluck('aftertaste').reduce(sum, 0).value()
+        },
+        max = {
+          presentation: _.pluck(item.rating, 'presentation').length * 10,
+          aroma: _.pluck(item.rating, 'aroma').length * 10,
+          taste: _.pluck(item.rating, 'taste').length * 10,
+          texture: _.pluck(item.rating, 'texture').length * 10,
+          aftertaste: _.pluck(item.rating, 'aftertaste').length * 10
+        },
+        avg = [
+          (totals['presentation']/max['presentation']),
+          (totals['aroma']/max['aroma']),
+          (totals['taste']/max['taste']) * 2,
+          (totals['texture']/max['texture']),
+          (totals['aftertaste']/max['aftertaste'])
+        ],
+        pct = _.reduce(avg, function (r,v) { return (v) ? r+v: r; }, 0)/6;
+      return Math.round(pct*1000)/10;
+    },
+    avgSort = function(a, b) {
+      var aa = avg(a),
+          ab = avg(b);
+
+        return (aa===ab) ? 0 : ((aa<ab) ? 1 : -1);
+    };
+
+  $scope.avgRating = avg
+
+  $scope.ttlRating = function (item) {
+    var totals = {
+          presentation: _.chain(item.rating).pluck('presentation').reduce(sum, 0).value(),
+          aroma: _.chain(item.rating).pluck('aroma').reduce(sum, 0).value(),
+          taste: _.chain(item.rating).pluck('taste').reduce(sum, 0).value() * 2,
+          texture: _.chain(item.rating).pluck('texture').reduce(sum, 0).value(),
+          aftertaste: _.chain(item.rating).pluck('aftertaste').reduce(sum, 0).value()
+        },
+        max = {
+          presentation: _.pluck(item.rating, 'presentation').length * 10,
+          aroma: _.pluck(item.rating, 'aroma').length * 10,
+          taste: _.pluck(item.rating, 'taste').length * 20,
+          texture: _.pluck(item.rating, 'texture').length * 10,
+          aftertaste: _.pluck(item.rating, 'aftertaste').length * 10
+        };
+
+    return _.reduce(totals, function (r,v) { return (v) ? r+v: r; }, 0)
+            + ' of '
+            + _.reduce(max, function (r,v) { return (v) ? r+v: r; }, 0);
+  };
+
+
+  list.$watch(function (e){
+    list.sort(avgSort);
+  });
+
+  $scope.entries = list;
 }]);
 
 

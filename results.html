@@ -1,4 +1,20 @@
-<h1>Leaderboard</h1>
 
+<div class="content-padding">
+  <h1>Leaderboard</h1>
+  <ul class="media-list">
+      <li ng-repeat="item in entries" class="media">
 
+        <span class="pull-left ranking">#{{$index+1}}</span>
 
+        <div class="media-body">
+          <h4 class="media-heading" ng-bind="item.title"></h4>
+          <div class="rank-desc">
+            Owner: {{item.owner}}<br />
+            Avg Rating: {{avgRating(item)}}%<br />
+            Total Rating: {{ttlRating(item)}}
+          </div>
+        </div>
+      </li>
+      <li ng-if="entries.length == 0">No Chili found. Somebody start cooking!</li>
+  </ul>
+</div>

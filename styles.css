@@ -71,3 +71,15 @@ h1, h2, h3 {
 .nav-pills>li+li {
   margin-left: 1em;
 }
+
+
+.ranking {
+  width: 64px;
+  font-size: 3em;
+  font-weight: bold;
+  text-align: center;
+  display: block;
+}
+.rank-desc {
+  font-size: smaller;
+}
