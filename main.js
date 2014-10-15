@@ -98,7 +98,7 @@ chili.controller('HomeController', ['$scope', '$firebase', 'firebaseUri', functi
 
 }]);
 
-chili.controller('DetailController', ['$scope', '$routeParams', '$firebase', 'firebaseUri', function($scope, $routeParams, $firebase, firebaseUri) {
+chili.controller('DetailController', ['$scope', '$routeParams', '$location', '$firebase', 'firebaseUri', function($scope, $routeParams, $location, $firebase, firebaseUri) {
   var ref = new Firebase(firebaseUri + '/entries/' + $routeParams.chiliId);
   var sync = $firebase(ref);
   var detail = sync.$asObject();
@@ -122,6 +122,8 @@ chili.controller('DetailController', ['$scope', '$routeParams', '$firebase', 'fi
     detail.$save();
 
     $scope.isRated = true;
+
+    $location.path('/Home');
   };
 
 }]);
