@@ -4,11 +4,13 @@
   <div class="col-xs-12">
     <h1>Chili Cookoff</h1>
 
+    <p>Enter a username to login</p>
+
     <form role="form">
       <div class="input-group">
-        <input type="text" class="form-control" ng-model="username" ng-required="true" mg-minlength="4" placeholder="Enter name">
+        <input type="text" class="form-control" ng-model="username" ng-required="true" ng-minlength="4" placeholder="Enter name">
         <span class="input-group-btn">
-          <button type="submit" class="btn btn-default" ng-click="enter()" ng-disabled="username.length < 4"><span class="glyphicon glyphicon-thumbs-up" /></button>
+          <button type="submit" class="btn btn-default" ng-click="enter()" ng-disabled="username.length < 4">Login <span class="glyphicon glyphicon-chevron-right" /></button>
         </span>
       </div>
     </form>
