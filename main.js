@@ -234,9 +234,10 @@ chili.controller('ResultsController', ['$scope', '$firebase', 'firebaseUri', fun
 
   list.$watch(function (e){
     list.sort(avgSort);
+    $scope.entries = _.first(list, 4);
   });
 
-  $scope.entries = list.splice(0,5);
+  //$scope.entries = list;
 }]);
 
 
