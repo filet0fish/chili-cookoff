@@ -1,12 +1,13 @@
 
   <div id="chili-chat">
 
-    <form>
+    <form name="chat">
       <div class="input-group">
-        <input type="text" ng-model="chatInput" />
+        <input type="text" ng-model="chatInput" maxlength="140" />
         <span class="input-group-btn">
-          <button type="submit" class="btn btn-default" ng-disabled="chatInput.length < 1" ng-click="postChat()">
+          <button type="submit" class="btn btn-default" ng-disabled="chat.$invalid || chatInput.length < 1" ng-click="postChat()">
             <span class="glyphicon glyphicon-comment"></span>
+            <span class="tiny">{{140 - chatInput.length}}</span>
           </button>
         </span>
       </div>

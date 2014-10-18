@@ -3,7 +3,7 @@
     <ul class="media-list">
         <li ng-repeat="item in entries" class="media">
           <a class="pull-left" ng-href="#/Chili/{{item.$id}}">
-            <img ng-src="{{item.photo}}" width="64" height="64" />
+            <img ng-src="{{(item.photo) ? item.photo : 'http://www.boothbayregister.com/sites/default/files/2014/01/field/image/chili-pepper-cartoon%5B1%5D.jpg'}}" width="64" height="64" />
           </a>
           <div class="media-body">
             <h4 class="media-heading" ng-bind="item.title"></h4>
