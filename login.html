@@ -2,15 +2,17 @@
 
 <div class="row content-padding">
   <div class="col-xs-12">
-    <h1>Chili Cookoff</h1>
 
-    <p>Enter a username to login</p>
+    <h1>5th Annual Chili Cookoff!</h1>
+
+    <p>Welcome to the 5th Annual Chili Cookoff!</p>
+    <p>This app will allow you to rate each chili entered.  To begin, <strong>please enter your name</strong> without any punctuation to create a profile.</p>
 
     <form role="form">
       <div class="input-group">
         <input type="text" class="form-control" ng-model="username" ng-required="true" ng-minlength="4" placeholder="Enter name">
         <span class="input-group-btn">
-          <button type="submit" class="btn btn-default" ng-click="enter()" ng-disabled="username.length < 4">Login <span class="glyphicon glyphicon-chevron-right" /></button>
+          <button type="submit" class="btn btn-default" ng-click="enter()" ng-disabled="username.length < 4">Begin <span class="glyphicon glyphicon-chevron-right" /></button>
         </span>
       </div>
     </form>

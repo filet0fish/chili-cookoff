@@ -7,6 +7,8 @@ chili.factory("simpleLogin", ["$firebaseSimpleLogin", 'firebaseUri', '$cookies',
     instance = {
       firebase: $firebaseSimpleLogin(ref),
       username: $cookies.username,
+      admin: 'chris kamsler',
+
       login: function (user) {
         $cookies.username = user;
         instance.username = user;
@@ -209,6 +211,8 @@ chili.controller('ResultsController', ['$scope', '$firebase', 'firebaseUri', fun
     };
 
   $scope.avgRating = avg
+
+  
 
   $scope.ttlRating = function (item) {
     var totals = {

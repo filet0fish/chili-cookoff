@@ -4,15 +4,20 @@
   <ul class="media-list">
       <li ng-repeat="item in entries" class="media">
 
-        <span class="pull-left ranking">#{{$index+1}}</span>
+        <span class="pull-left ranking">{{$index+1}}</span>
 
         <div class="media-body">
           <h4 class="media-heading" ng-bind="item.title"></h4>
-          <div class="rank-desc">
+
+          <div class="rank-desc" ng-show='auth.username == auth.admin'>
+            <p>
             Owner: {{item.owner}}<br />
             Avg Rating: {{avgRating(item)}}%<br />
             Total Rating: {{ttlRating(item)}}
+            </p>
           </div>
+          <div class='fire-gfx-ranking' style='width: {{avgRating(item)}}%;'></div>
+
         </div>
       </li>
       <li ng-if="entries.length == 0">No Chili found. Somebody start cooking!</li>
