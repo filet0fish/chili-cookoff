@@ -92,9 +92,9 @@ chili.controller('HomeController', ['$scope', '$firebase', 'firebaseUri', functi
 
   $scope.formatRating = function (rating) {
     if (rating) {
-      return (rating.presentation + rating.aroma + rating.texture + rating.taste + rating.aftertaste) + '/50';
+      return ((rating.presentation + rating.aroma + rating.texture + (rating.taste*2) + rating.aftertaste) / 60)*100;
     } else {
-      return '';
+      return 0;
     }
   };
 
