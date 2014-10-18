@@ -13,9 +13,9 @@
 
   <div id="chili-nav">
     <ul class="nav nav-pills" role="tablist">
-      <li><a href="#/Home" ng-show="auth.username"><span class="glyphicon glyphicon-th-list"></span></a></li>
-      <li><a href="#/Chat" ng-show="auth.username"><span class="glyphicon glyphicon-comment"></span></a></li>
-      <li><a href="#/Add"><span class="glyphicon glyphicon-upload"></span></a></li>
+      <li><a href="#/Home" ng-show="auth.username"><span class="glyphicon glyphicon-th-list"></span> Vote</a></li>
+      <li><a href="#/Chat" ng-show="auth.username"><span class="glyphicon glyphicon-comment"></span> Chat</a></li>
+      <li><a href="#/Add" ng-show="auth.username == auth.admin"><span class="glyphicon glyphicon-upload"></span></a></li>
       <li><a href="#/Results"><span class="glyphicon glyphicon-stats"></span></a></li>
       <li><a href="#/Login" ng-click="auth.login('')" ng-show="auth.username"><span class="glyphicon glyphicon-remove-sign"></span></a></li>
     </ul>

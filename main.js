@@ -7,6 +7,8 @@ chili.factory("simpleLogin", ["$firebaseSimpleLogin", 'firebaseUri', '$cookies',
     instance = {
       firebase: $firebaseSimpleLogin(ref),
       username: $cookies.username,
+      admin: 'chili-admin',
+
       login: function (user) {
         $cookies.username = user;
         instance.username = user;
@@ -90,9 +92,9 @@ chili.controller('HomeController', ['$scope', '$firebase', 'firebaseUri', functi
 
   $scope.formatRating = function (rating) {
     if (rating) {
-      return (rating.presentation + rating.aroma + rating.texture + rating.taste + rating.aftertaste) + '/50';
+      return ((rating.presentation + rating.aroma + rating.texture + (rating.taste*2) + rating.aftertaste) / 60)*100;
     } else {
-      return '';
+      return 0;
     }
   };
 
@@ -209,6 +211,8 @@ chili.controller('ResultsController', ['$scope', '$firebase', 'firebaseUri', fun
     };
 
   $scope.avgRating = avg
+
+
 
   $scope.ttlRating = function (item) {
     var totals = {
