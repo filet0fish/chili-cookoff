@@ -1,0 +1,19 @@
+
+<div class="content-padding">
+  <h1>Leaderboard</h1>
+  <ul class="media-list">
+      <li ng-repeat="item in entries" class="media">
+
+        <span class="pull-left ranking">{{$index+1}}</span>
+
+        <div class="media-body">
+          <h4 class="media-heading" ng-bind="item.title"></h4>
+
+          <div>{{ item.name }} Total Rating: {{ item.totalRating }} Voters: {{ item.voterTotals }}</div>
+
+          <div class="rank-desc"></div>
+        </div>
+      </li>
+      <li ng-if="entries.length == 0">No Chili found. Somebody start cooking!</li>
+  </ul>
+</div>

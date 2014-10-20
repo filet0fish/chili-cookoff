@@ -57,6 +57,10 @@ chili.config(function($routeProvider, $locationProvider) {
     templateUrl: 'results.html',
     controller: 'ResultsController'
   })
+  .when('/Totals', {
+    templateUrl: 'totals.html',
+    controller: 'TotalsController'
+  })
   .otherwise({
     templateUrl: 'home.html',
     controller: 'HomeController',
@@ -167,6 +171,37 @@ chili.controller("AddController", ['$scope', '$firebase', 'firebaseUri', functio
 
 }]);
 
+chili.controller('TotalsController', ['$scope', '$firebase', 'firebaseUri', function($scope, $firebase, firebaseUri) {
+
+  var ref = new Firebase(firebaseUri + "/entries");
+  var sync = $firebase(ref);
+
+  var list = sync.$asArray();
+
+  var 
+    reduce = function (memo, o) {
+      return parseInt(memo || 0) + (o.presentation + o.aroma + o.taste + o.texture + o.aftertaste);
+    },
+    sort = function(a, b) {
+      var aa = _.reduce(a.rating, reduce),
+          bb = _.reduce(b.rating, reduce)
+          ;
+
+          a.totalRating = a.totalRating || aa;
+          a.voterTotals = a.voterTotals || _.keys(a.rating).length;
+
+          b.totalRating = b.totalRating || bb;
+          b.voterTotals = b.voterTotals || _.keys(b.rating).length;
+
+      return (aa == bb) ? 0 : aa < bb; 
+  };
+
+  list.$watch(function (e){
+    list.sort(sort);
+    $scope.entries = list;
+  });
+
+}]);
 
 chili.controller('ResultsController', ['$scope', '$firebase', 'firebaseUri', function($scope, $firebase, firebaseUri) {
 
@@ -238,7 +273,7 @@ chili.controller('ResultsController', ['$scope', '$firebase', 'firebaseUri', fun
 
   list.$watch(function (e){
     list.sort(avgSort);
-    $scope.entries = _.first(list, 4);
+    $scope.entries = list;
   });
 
   //$scope.entries = list;
