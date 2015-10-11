@@ -3,27 +3,44 @@
 <head>
   <title>Chili Cookoff</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.red-indigo.min.css">
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css/ionic.min.css">
-  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <div id="chili-nav">
     <ul class="nav nav-pills" role="tablist">
-      <li><a href="#/Home" ng-show="auth.username"><span class="glyphicon glyphicon-th-list"></span> Vote</a></li>
-      <li><a href="#/Chat" ng-show="auth.username"><span class="glyphicon glyphicon-comment"></span> Chat</a></li>
-      <li><a href="#/Add" ng-show="auth.username == auth.admin"><span class="glyphicon glyphicon-upload"></span></a></li>
-      <li><a href="#/Results"><span class="glyphicon glyphicon-stats"></span></a></li>
-      <li><a href="#/Login" ng-click="auth.login('')" ng-show="auth.username"><span class="glyphicon glyphicon-remove-sign"></span></a></li>
+
     </ul>
   </div>
 
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Chili Rate-o-matic</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <!-- Navigation.  -->
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="#/Home" ng-show="auth.username">Vote</a>
+        <a class="mdl-navigation__link" href="#/Add" ng-show="auth.username == auth.admin"></a>
+        <a class="mdl-navigation__link" href="#/Results">Results</a>
+        <a class="mdl-navigation__link" href="#/Login" ng-click="auth.login('')" ng-show="auth.username">Switch Users</a>
+      </nav>
+    </div>
+  </header>
+  <main class="mdl-layout__content">
+    <div class="page-content">
+        <div id="chili-content" ng-view></div>
+    </div>
+  </main>
+</div>
 
-
-  <div id="chili-content" ng-view></div>
 
   <!-- AngularJS -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.19/angular.min.js"></script>
