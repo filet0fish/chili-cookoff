@@ -1,16 +1,14 @@
-  <div class="content-padding">
-    <h2>Pick a chili to rate</h2>
-    <ul class="media-list">
-        <li ng-repeat="item in entries" class="media">
-          <a class="pull-left" ng-href="#/Chili/{{item.$id}}">
-            <img ng-src="{{(item.photo) ? item.photo : 'http://www.boothbayregister.com/sites/default/files/2014/01/field/image/chili-pepper-cartoon%5B1%5D.jpg'}}" width="64" height="64" />
-          </a>
-          <div class="media-body">
-            <h4 class="media-heading" ng-bind="item.title"></h4>
-            <a ng-hide="item.rating[auth.username]" ng-href="#/Chili/{{item.$id}}">Rate it!</a>
-            <div ng-show="item.rating[auth.username]">Rated: <div class='fire-gfx-ranking' style='width: {{formatRating(item.rating[auth.username])}}%;'></div></div>
-          </div>
-        </li>
-        <li ng-if="entries.length == 0">No Chili found. Somebody start cooking!</li>
-    </ul>
+<h4>Pick a chili to rate</h4>
+
+<div class="chili-card mdl-card mdl-shadow--2dp" ng-repeat="item in entries">
+  <div class="mdl-card__title" style="background: url('{{item.photo}}') center / cover;">
   </div>
+  <div class="mdl-card__supporting-text">
+    <h3 class="mdl-card__title-text" ng-bind="item.title"></h3>
+  </div>
+  <div class="mdl-card__actions mdl-card--border">
+    <a class="mdl-button mdl-js-button  mdl-button--raised mdl-button--colored" ng-hide="item.rating[auth.username]" ng-href="#/Chili/{{item.$id}}">Rate it!</a>
+    <div ng-show="item.rating[auth.username]">Rated: <div class='fire-gfx-ranking' style='width: {{formatRating(item.rating[auth.username])}}%;'></div></div>
+  </div>
+</div>  
+<div ng-if="entries.length == 0">No Chili found. Somebody start cooking!</div>

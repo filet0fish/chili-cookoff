@@ -1,0 +1,25 @@
+
+.login-input {
+	height: 30px;
+}
+
+.page-content {
+	margin: 1rem;
+}
+
+.mdl-card {
+	width: auto;
+}
+
+.chili-card {
+	margin-bottom: 2rem;
+}
+
+.chili-card > .mdl-card__title {
+  height: 176px;
+}
+/*
+.chili-card > .mdl-card__actions {
+	background: rgb(244,67,54);
+}
+*/
