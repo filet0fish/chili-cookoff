@@ -11,15 +11,55 @@
 	width: auto;
 }
 
-.chili-card {
+.chili-card, .chili-result-card {
 	margin-bottom: 2rem;
 }
 
 .chili-card > .mdl-card__title {
   height: 176px;
 }
-/*
-.chili-card > .mdl-card__actions {
+
+.chili-detail header {
+	margin: -1rem -1rem 2rem -1rem;
 	background: rgb(244,67,54);
+	color: #fff;
+	height: 256px;
+	position: relative;
 }
-*/
+
+.chili-detail header h3 {
+	position: absolute;
+	bottom: 0;
+	padding: 0 1rem;
+	margin-bottom: 0;
+	text-shadow: #333 2px 2px 2px;	
+}
+
+.chili-result-card:nth-child(1) {
+	background: gold;
+}
+
+.chili-result-card:nth-child(2) {
+	background: silver;
+}
+
+.chili-result-card:nth-child(3) {
+	background: brown;
+}
+
+.form-group {
+	margin-bottom: 3em;
+}
+
+.login-video {
+	position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.login-card {
+	background: rgba(255,255,255,0.5);
+}

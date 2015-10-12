@@ -150,7 +150,7 @@ chili.controller("AddController", ['$scope', '$firebase', 'firebaseUri', functio
   var ref = new Firebase(firebaseUri + "/entries");
   var sync = $firebase(ref);
 
-  $scope.addChili = function () {
+  $scope.pushChili = function () {
 
     sync.$push({
       title: $scope.title,

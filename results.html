@@ -1,25 +1,20 @@
-
-<div class="content-padding">
-  <h1>Leaderboard</h1>
-  <ul class="media-list">
-      <li ng-repeat="item in entries" class="media">
-
-        <span class="pull-left ranking">{{$index+1}}</span>
-
-        <div class="media-body">
-          <h4 class="media-heading" ng-bind="item.title"></h4>
-
-          <div class="rank-desc" ng-show='auth.username == auth.admin'>
-            <p>
-            Owner: {{item.owner}}<br />
-            Avg Rating: {{avgRating(item)}}%<br />
-            Total Rating: {{ttlRating(item)}}
-            </p>
-          </div>
-          <div class='fire-gfx-ranking' style='width: {{avgRating(item)}}%;'></div>
-
-        </div>
-      </li>
-      <li ng-if="entries.length == 0">No Chili found. Somebody start cooking!</li>
-  </ul>
+<h3>Leaderboard</h3>
+ 
+<div class="result-cards">
+  <div class="chili-result-card mdl-card mdl-shadow--2dp" ng-repeat="item in entries">
+    <div class="mdl-card__title">
+      <h3>#{{$index+1}}</h3>
+    </div>
+    <div class="mdl-card__supporting-text">
+      <h3 class="mdl-card__title-text" ng-bind="item.title"></h3>
+      <p ng-show='auth.username == auth.admin'>
+        Owner: {{item.owner}}<br />
+        Avg Rating: {{avgRating(item)}}%<br />
+        Total Rating: {{ttlRating(item)}}
+      </p>
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+      <!-- Copy in rating stars -->
+    </div>
+  </div> 
 </div>

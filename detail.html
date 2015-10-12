@@ -1,44 +1,42 @@
 
-<div class="row" style="background: url('{{(detail.photo) ? detail.photo : 'http://photography.nationalgeographic.com/staticfiles/NGS/Shared/StaticFiles/Photography/Images/Content/red-chili-peppers-057pc08tad3lhe017-xl.jpg'}}'); background-size:cover;')">
-  <div class="col-xs-12">
+<div class="chili-detail">
+    <header style="background: url('{{detail.photo}}') center / cover;">
+        <h3 class="mdl-shadow--2dp">{{detail.title}}</h3>
+    </header>
+    
+    <p>{{detail.description}}</p>
 
-    <div class="chili-detail content-padding">
-      <h3>{{detail.title}}</h3>
-      <div>
-        {{detail.description}}
-      </div>
-
-      <form name="form" role="form">
+    <form name="form" role="form">
         <div class="form-group">
-          <label>Presentation / Color: {{rating.presentation}}</label>
-          <input type="range" ng-model="rating.presentation" min="0" max="10" step="1" required to-number ng-disabled="isRated" />
+            <h4>Presentation: {{rating.presentation}}</h4>
+            <input type="range" class="mdl-slider mdl-js-slider" ng-model="rating.presentation" min="0" max="10" step="1" required to-number ng-disabled="isRated" />
         </div>
         <div class="form-group">
-          <label>Aroma: {{rating.aroma}}</label>
-          <input type="range" ng-model="rating.aroma" min="0" max="10" step="1" required to-number ng-disabled="isRated" />
+            <h4>Aroma: {{rating.aroma}}</h4>
+            <input type="range" class="mdl-slider mdl-js-slider" ng-model="rating.aroma" min="0" max="10" step="1" required to-number ng-disabled="isRated" />
         </div>
         <div class="form-group">
-          <label>Texture: {{rating.texture}}</label>
-          <input type="range" ng-model="rating.texture" min="0" max="10" step="1" required to-number ng-disabled="isRated" />
+            <h4>Texture: {{rating.texture}}</h4>
+            <input type="range" class="mdl-slider mdl-js-slider" ng-model="rating.texture" min="0" max="10" step="1" required to-number ng-disabled="isRated" />
         </div>
         <div class="form-group">
-          <label>Taste: {{rating.taste}}</label>
-          <input type="range" ng-model="rating.taste" min="0" max="10" step="1" required to-number ng-disabled="isRated" />
+            <h4>Taste: {{rating.taste}}</h4>
+            <input type="range" class="mdl-slider mdl-js-slider" ng-model="rating.taste" min="0" max="10" step="1" required to-number ng-disabled="isRated" />
         </div>
         <div class="form-group">
-          <label>After Taste: {{rating.aftertaste}}</label>
-          <input type="range" ng-model="rating.aftertaste" min="0" max="10" step="1" required to-number ng-disabled="isRated" />
+            <h4>After Taste: {{rating.aftertaste}}</h4>
+            <input type="range" class="mdl-slider mdl-js-slider" ng-model="rating.aftertaste" min="0" max="10" step="1" required to-number ng-disabled="isRated" />
         </div>
         <div class="form-group">
-          <label>Tasting Notes:</label>
-          <textarea ng-model="rating.commentary" ng-disabled="isRated"></textarea>
+            <div class="mdl-textfield mdl-js-textfield">
+                <textarea class="mdl-textfield__input" type="text" rows= "3" id="inTastingNotes" ng-model="rating.commentary" ng-disabled="isRated"></textarea>
+                <label class="mdl-textfield__label" for="inTastingNotes">Tasting Notes</label>
+            </div>
         </div>
         <div style="text-align:center">
-          <button type="submit" class="btn btn-default btn-lg" ng-click="rate()" ng-disabled="form.$invalid" ng-hide="isRated">Submit Your Vote</button>
+            <h3>Score: {{rating.presentation + rating.aroma + rating.texture + rating.taste + rating.aftertaste}} </h3>
+            <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" ng-click="rate()" ng-disabled="form.$invalid" ng-hide="isRated">Submit Your Vote</button>
         </div>
-      </form>
+    </form>
 
-    </div>
-
-  </div>
 </div>
