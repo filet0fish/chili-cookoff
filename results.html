@@ -14,7 +14,13 @@
       </p>
     </div>
     <div class="mdl-card__actions mdl-card--border">
-      <!-- Copy in rating stars -->
+      <div class="star-rating">
+        <i class="material-icons" ng-bind="starRating(item, 1)"></i>
+        <i class="material-icons" ng-bind="starRating(item, 2)"></i>
+        <i class="material-icons" ng-bind="starRating(item, 3)"></i>
+        <i class="material-icons" ng-bind="starRating(item, 4)"></i>
+        <i class="material-icons" ng-bind="starRating(item, 5)"></i>      
+      </div>
     </div>
   </div> 
 </div>

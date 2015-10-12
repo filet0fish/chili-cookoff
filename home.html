@@ -8,11 +8,13 @@
   </div>
   <div class="mdl-card__actions mdl-card--border">
     <a class="mdl-button mdl-js-button  mdl-button--raised mdl-button--colored" ng-hide="item.rating[auth.username]" ng-href="#/Chili/{{item.$id}}">Rate it!</a>
-    <div ng-show="item.rating[auth.username]">Rated: <div class='fire-gfx-ranking' style='width: {{formatRating(item.rating[auth.username])}}%;'></div>
-    
-    <div class="icon icon-ic_play-star_black_24dp"></div>
-    <div class="icon icon-ic_play-star_half_black_24dp"></div>
-    <div class="icon icon-ic_play-star_outline_black_24dp"></div>
+    <div class="star-rating" ng-show="item.rating[auth.username]">
+      <i class="material-icons" ng-bind="starRating(item.rating[auth.username], 1)"></i>
+      <i class="material-icons" ng-bind="starRating(item.rating[auth.username], 2)"></i>
+      <i class="material-icons" ng-bind="starRating(item.rating[auth.username], 3)"></i>
+      <i class="material-icons" ng-bind="starRating(item.rating[auth.username], 4)"></i>
+      <i class="material-icons" ng-bind="starRating(item.rating[auth.username], 5)"></i>      
+    </div>
     
     </div>
   </div>

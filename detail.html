@@ -27,12 +27,6 @@
             <h4>After Taste: {{rating.aftertaste}}</h4>
             <input type="range" class="mdl-slider mdl-js-slider" ng-model="rating.aftertaste" min="0" max="10" step="1" required to-number ng-disabled="isRated" />
         </div>
-        <div class="form-group">
-            <div class="mdl-textfield mdl-js-textfield">
-                <textarea class="mdl-textfield__input" type="text" rows= "3" id="inTastingNotes" ng-model="rating.commentary" ng-disabled="isRated"></textarea>
-                <label class="mdl-textfield__label" for="inTastingNotes">Tasting Notes</label>
-            </div>
-        </div>
         <div style="text-align:center">
             <h3>Score: {{rating.presentation + rating.aroma + rating.texture + rating.taste + rating.aftertaste}} </h3>
             <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" ng-click="rate()" ng-disabled="form.$invalid" ng-hide="isRated">Submit Your Vote</button>

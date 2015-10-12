@@ -98,6 +98,23 @@ chili.controller('HomeController', ['$scope', '$firebase', 'firebaseUri', functi
     }
   };
 
+  $scope.starRating = function (rating, position) {
+    var pct = (!rating) ? 0 : ((rating.presentation + rating.aroma + rating.texture + (rating.taste*2) + rating.aftertaste) / 60) * 10;
+    
+    if (position * 2 < pct)
+    {
+      return "star";
+    }
+    else if ((position * 2) - 1 < pct)
+    {
+      return "star_half";
+    }
+    else
+    {
+      return "star_outline";
+    }
+  }
+
 }]);
 
 chili.controller('DetailController', ['$scope', '$routeParams', '$location', '$firebase', 'firebaseUri', function($scope, $routeParams, $location, $firebase, firebaseUri) {
@@ -212,7 +229,22 @@ chili.controller('ResultsController', ['$scope', '$firebase', 'firebaseUri', fun
 
   $scope.avgRating = avg
 
-
+  $scope.starRating = function (rating, position) {
+    var pct = avg(rating) / 10;
+    
+    if (position * 2 < pct)
+    {
+      return "star";
+    }
+    else if ((position * 2) - 1 < pct)
+    {
+      return "star_half";
+    }
+    else
+    {
+      return "star_outline";
+    }
+  }
 
   $scope.ttlRating = function (item) {
     var totals = {
