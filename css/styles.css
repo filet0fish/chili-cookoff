@@ -1,3 +1,6 @@
+.add-button {
+	float: right;
+}
 
 .login-input {
 	height: 30px;
@@ -9,6 +12,10 @@
 
 .mdl-card {
 	width: auto;
+}
+
+.mdl-navigation__link {
+	font-size: 24px;
 }
 
 .chili-card, .chili-result-card {
@@ -35,15 +42,15 @@
 	text-shadow: #333 2px 2px 2px;	
 }
 
-.chili-result-card:nth-child(1) {
+.chili-result-card:nth-child(1) .mdl-card__title {
 	background: gold;
 }
 
-.chili-result-card:nth-child(2) {
+.chili-result-card:nth-child(2) .mdl-card__title {
 	background: silver;
 }
 
-.chili-result-card:nth-child(3) {
+.chili-result-card:nth-child(3) .mdl-card__title {
 	background: brown;
 }
 

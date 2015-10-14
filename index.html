@@ -23,10 +23,20 @@
   </header>
   <div class="mdl-layout__drawer">
     <nav class="mdl-navigation">
-      <a class="mdl-navigation__link" href="#/Home" ng-show="auth.username">Vote</a>
-      <a class="mdl-navigation__link" href="#/Add" ng-show="auth.username == auth.admin">Add Chili</a>
-      <a class="mdl-navigation__link" href="#/Results">Results</a>
-      <a class="mdl-navigation__link" href="#/Login" ng-click="auth.login('')">Switch User</a>
+      <a class="mdl-navigation__link" href="#/Home" menu-close ng-show="auth.username">
+        <span class="material-icons">whatshot</span> Vote
+      </a>
+      <a class="mdl-navigation__link" href="#/Add" menu-close ng-show="auth.username == auth.admin">
+        <span class="material-icons">plus_one</span> Add Chili
+      </a>
+      <a class="mdl-navigation__link" href="#/Results" menu-close>
+        <span class="material-icons">poll</span>
+        Results
+      </a>
+      <a class="mdl-navigation__link" href="#/Login" menu-close ng-click="auth.login('')">
+        <span class="material-icons">people</span>
+        Switch User
+      </a>
     </nav>
   </div>
   <main class="mdl-layout__content">

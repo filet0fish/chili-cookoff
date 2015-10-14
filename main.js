@@ -288,3 +288,18 @@ chili.directive('toNumber', function () {
         }
     };
 });
+
+// Workaround for mdl not closing drawers
+chili.directive('menuClose', function() {
+    return {
+        restrict: 'AC',
+        link: function($scope, $element) {
+            $element.bind('click', function() {
+                var drawer = angular.element(document.querySelector('.mdl-layout__drawer'));
+                if(drawer) {
+                    drawer.toggleClass('is-visible');
+                }
+            });
+        }
+    };
+});
