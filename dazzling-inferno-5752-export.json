@@ -1,0 +1,977 @@
+{
+  "chat" : {
+    "-JZ0bkcTub5Up3U14CBR" : {
+      "text" : "Start chatting.",
+      "user" : "test"
+    },
+    "-JZ_T2ActW8gBvt3veac" : {
+      "text" : "Hello!",
+      "user" : "Jennifer Berry"
+    },
+    "-JZ_Y2V5ycEI9tkJMubK" : {
+      "text" : "Make #2 the #1",
+      "user" : "Jesiah"
+    },
+    "-JZ_cFI4zT_GLtZ8R17f" : {
+      "text" : "Wooooooooooo",
+      "user" : "Jesiah"
+    }
+  },
+  "entries" : {
+    "num1" : {
+      "photo" : "http://i.imgur.com/denQquw.jpg",
+      "rating" : {
+        "Amyba" : {
+          "aftertaste" : 6,
+          "aroma" : 6,
+          "presentation" : 6,
+          "taste" : 7,
+          "texture" : 7
+        },
+        "Chrisk" : {
+          "aftertaste" : 3,
+          "aroma" : 3,
+          "presentation" : 3,
+          "taste" : 6,
+          "texture" : 3
+        },
+        "Courtney" : {
+          "aftertaste" : 3,
+          "aroma" : 5,
+          "presentation" : 4,
+          "taste" : 4,
+          "texture" : 3
+        },
+        "Daniel F" : {
+          "aftertaste" : 3,
+          "aroma" : 4,
+          "presentation" : 6,
+          "taste" : 3,
+          "texture" : 8
+        },
+        "Daniel To" : {
+          "aftertaste" : 6,
+          "aroma" : 5,
+          "presentation" : 6,
+          "taste" : 5,
+          "texture" : 7
+        },
+        "Esley" : {
+          "aftertaste" : 4,
+          "aroma" : 6,
+          "presentation" : 6,
+          "taste" : 6,
+          "texture" : 6
+        },
+        "Ila G" : {
+          "aftertaste" : 5,
+          "aroma" : 5,
+          "presentation" : 5,
+          "taste" : 4,
+          "texture" : 4
+        },
+        "Jennifer Callahan" : {
+          "aftertaste" : 8,
+          "aroma" : 7,
+          "commentary" : "Spicy!",
+          "presentation" : 7,
+          "taste" : 7,
+          "texture" : 8
+        },
+        "Jesiah" : {
+          "aftertaste" : 10,
+          "aroma" : 5,
+          "commentary" : "Hot but not too hot. Very flavorful",
+          "presentation" : 2,
+          "taste" : 10,
+          "texture" : 5
+        },
+        "Josh" : {
+          "aftertaste" : 6,
+          "aroma" : 8,
+          "commentary" : "hot!",
+          "presentation" : 8,
+          "taste" : 7,
+          "texture" : 9
+        },
+        "Kristin" : {
+          "aftertaste" : 6,
+          "aroma" : 4,
+          "presentation" : 7,
+          "taste" : 8,
+          "texture" : 5
+        },
+        "Leanne" : {
+          "aftertaste" : 10,
+          "aroma" : 10,
+          "presentation" : 10,
+          "taste" : 10,
+          "texture" : 10
+        },
+        "Olivia" : {
+          "aftertaste" : 3,
+          "aroma" : 2,
+          "presentation" : 6,
+          "taste" : 2,
+          "texture" : 3
+        },
+        "Paul" : {
+          "aftertaste" : 10,
+          "aroma" : 10,
+          "presentation" : 10,
+          "taste" : 10,
+          "texture" : 10
+        },
+        "Sandeep" : {
+          "aftertaste" : 7,
+          "aroma" : 7,
+          "presentation" : 7,
+          "taste" : 10,
+          "texture" : 10
+        },
+        "Tom Callahan" : {
+          "aftertaste" : 7,
+          "aroma" : 8,
+          "presentation" : 7,
+          "taste" : 9,
+          "texture" : 7
+        }
+      },
+      "title" : "#1 Beef, Buffalo + Pork"
+    },
+    "num10" : {
+      "photo" : "http://i.imgur.com/ZUKxMfb.jpg",
+      "rating" : {
+        "Courtney" : {
+          "aftertaste" : 5,
+          "aroma" : 4,
+          "presentation" : 4,
+          "taste" : 4,
+          "texture" : 5
+        },
+        "Daniel F" : {
+          "aftertaste" : 10,
+          "aroma" : 10,
+          "presentation" : 10,
+          "taste" : 10,
+          "texture" : 10
+        },
+        "Daniel To" : {
+          "aftertaste" : 7,
+          "aroma" : 7,
+          "presentation" : 9,
+          "taste" : 8,
+          "texture" : 8
+        },
+        "Eirene B" : {
+          "aftertaste" : 8,
+          "aroma" : 8,
+          "presentation" : 8,
+          "taste" : 10,
+          "texture" : 8
+        },
+        "Esley" : {
+          "aftertaste" : 1,
+          "aroma" : 4,
+          "presentation" : 3,
+          "taste" : 2,
+          "texture" : 4
+        },
+        "Ila G" : {
+          "aftertaste" : 5,
+          "aroma" : 6,
+          "presentation" : 5,
+          "taste" : 6,
+          "texture" : 5
+        },
+        "Jennifer Callahan" : {
+          "aftertaste" : 7,
+          "aroma" : 7,
+          "commentary" : "Very tasty!",
+          "presentation" : 6,
+          "taste" : 9,
+          "texture" : 8
+        },
+        "Jesiah" : {
+          "aftertaste" : 1,
+          "aroma" : 2,
+          "commentary" : "Eh",
+          "presentation" : 2,
+          "taste" : 1,
+          "texture" : 2
+        },
+        "Josh" : {
+          "aftertaste" : 2,
+          "aroma" : 4,
+          "presentation" : 8,
+          "taste" : 4,
+          "texture" : 7
+        },
+        "Kris F" : {
+          "aftertaste" : 7,
+          "aroma" : 7,
+          "presentation" : 6,
+          "taste" : 7,
+          "texture" : 8
+        },
+        "Kristin" : {
+          "aftertaste" : 5,
+          "aroma" : 6,
+          "presentation" : 6,
+          "taste" : 4,
+          "texture" : 8
+        },
+        "Leanne" : {
+          "aftertaste" : 1,
+          "aroma" : 1,
+          "presentation" : 1,
+          "taste" : 1,
+          "texture" : 1
+        },
+        "Soraya" : {
+          "aftertaste" : 10,
+          "aroma" : 10,
+          "presentation" : 10,
+          "taste" : 10,
+          "texture" : 10
+        },
+        "Tom Callahan" : {
+          "aftertaste" : 4,
+          "aroma" : 6,
+          "presentation" : 8,
+          "taste" : 6,
+          "texture" : 4
+        },
+        "chris" : {
+          "aftertaste" : 10,
+          "aroma" : 10,
+          "commentary" : "Really Nice kick to it",
+          "presentation" : 10,
+          "taste" : 10,
+          "texture" : 10
+        }
+      },
+      "title" : "#10 Knight of Otono"
+    },
+    "num2" : {
+      "description" : "Local beef and Bacon",
+      "photo" : "http://i.imgur.com/VcXwJ9r.jpg",
+      "rating" : {
+        "Chrisk" : {
+          "aftertaste" : 10,
+          "aroma" : 10,
+          "presentation" : 10,
+          "taste" : 10,
+          "texture" : 10
+        },
+        "Courtney" : {
+          "aftertaste" : 3,
+          "aroma" : 4,
+          "presentation" : 4,
+          "taste" : 3,
+          "texture" : 4
+        },
+        "Daniel F" : {
+          "aftertaste" : 4,
+          "aroma" : 3,
+          "presentation" : 8,
+          "taste" : 2,
+          "texture" : 4
+        },
+        "Daniel To" : {
+          "aftertaste" : 5,
+          "aroma" : 4,
+          "presentation" : 6,
+          "taste" : 7,
+          "texture" : 6
+        },
+        "Esley" : {
+          "aftertaste" : 4,
+          "aroma" : 6,
+          "presentation" : 4,
+          "taste" : 4,
+          "texture" : 6
+        },
+        "Jennifer Callahan" : {
+          "aftertaste" : 6,
+          "aroma" : 7,
+          "commentary" : "Like the smokey flavor!",
+          "presentation" : 7,
+          "taste" : 6,
+          "texture" : 7
+        },
+        "Jesiah" : {
+          "aftertaste" : 10,
+          "aroma" : 10,
+          "commentary" : "Smokey and delicious",
+          "presentation" : 10,
+          "taste" : 10,
+          "texture" : 10
+        },
+        "Josh" : {
+          "aftertaste" : 9,
+          "aroma" : 9,
+          "presentation" : 10,
+          "taste" : 9,
+          "texture" : 9
+        },
+        "Kris F" : {
+          "aftertaste" : 7,
+          "aroma" : 8,
+          "presentation" : 6,
+          "taste" : 7,
+          "texture" : 7
+        },
+        "Kristin" : {
+          "aftertaste" : 3,
+          "aroma" : 4,
+          "presentation" : 7,
+          "taste" : 8,
+          "texture" : 8
+        },
+        "Leanne" : {
+          "aftertaste" : 3,
+          "aroma" : 1,
+          "presentation" : 1,
+          "taste" : 1,
+          "texture" : 1
+        },
+        "Paul" : {
+          "aftertaste" : 5,
+          "aroma" : 5,
+          "presentation" : 5,
+          "taste" : 5,
+          "texture" : 5
+        },
+        "Tom Callahan" : {
+          "aftertaste" : 8,
+          "aroma" : 8,
+          "presentation" : 8,
+          "taste" : 8,
+          "texture" : 8
+        }
+      },
+      "title" : "#2 Mountain Man"
+    },
+    "num3" : {
+      "description" : "Beef and pork",
+      "photo" : "http://i.imgur.com/qU1WaZO.jpg",
+      "rating" : {
+        "Aditya" : {
+          "aftertaste" : 8,
+          "aroma" : 7,
+          "presentation" : 5,
+          "taste" : 8,
+          "texture" : 8
+        },
+        "Amyba" : {
+          "aftertaste" : 6,
+          "aroma" : 7,
+          "presentation" : 6,
+          "taste" : 8,
+          "texture" : 6
+        },
+        "Chrisk" : {
+          "aftertaste" : 2,
+          "aroma" : 2,
+          "presentation" : 7,
+          "taste" : 8,
+          "texture" : 2
+        },
+        "Daniel F" : {
+          "aftertaste" : 8,
+          "aroma" : 8,
+          "presentation" : 8,
+          "taste" : 10,
+          "texture" : 8
+        },
+        "Daniel To" : {
+          "aftertaste" : 4,
+          "aroma" : 6,
+          "presentation" : 8,
+          "taste" : 7,
+          "texture" : 6
+        },
+        "Esley" : {
+          "aftertaste" : 4,
+          "aroma" : 4,
+          "presentation" : 6,
+          "taste" : 4,
+          "texture" : 4
+        },
+        "Ila G" : {
+          "aftertaste" : 7,
+          "aroma" : 5,
+          "presentation" : 5,
+          "taste" : 7,
+          "texture" : 8
+        },
+        "Jennifer Callahan" : {
+          "aftertaste" : 8,
+          "aroma" : 8,
+          "commentary" : "Yummy!",
+          "presentation" : 8,
+          "taste" : 8,
+          "texture" : 8
+        },
+        "Jesiah" : {
+          "aftertaste" : 2,
+          "aroma" : 2,
+          "commentary" : "Normal tasting chili. Nothing special",
+          "presentation" : 5,
+          "taste" : 2,
+          "texture" : 5
+        },
+        "Josh" : {
+          "aftertaste" : 6,
+          "aroma" : 8,
+          "commentary" : "cinnamon-y",
+          "presentation" : 8,
+          "taste" : 7,
+          "texture" : 8
+        },
+        "Kamie" : {
+          "aftertaste" : 1,
+          "aroma" : 10,
+          "presentation" : 8,
+          "taste" : 10,
+          "texture" : 10
+        },
+        "Kristin" : {
+          "aftertaste" : 4,
+          "aroma" : 4,
+          "presentation" : 6,
+          "taste" : 6,
+          "texture" : 5
+        },
+        "Leanne" : {
+          "aftertaste" : 1,
+          "aroma" : 1,
+          "presentation" : 3,
+          "taste" : 1,
+          "texture" : 2
+        },
+        "MayF" : {
+          "aftertaste" : 10,
+          "aroma" : 10,
+          "presentation" : 10,
+          "taste" : 10,
+          "texture" : 10
+        },
+        "Olivia" : {
+          "aftertaste" : 10,
+          "aroma" : 10,
+          "presentation" : 10,
+          "taste" : 10,
+          "texture" : 10
+        },
+        "Tom Callahan" : {
+          "aftertaste" : 3,
+          "aroma" : 6,
+          "presentation" : 6,
+          "taste" : 7,
+          "texture" : 4
+        }
+      },
+      "title" : "#3 chili con (LOTS of) carne"
+    },
+    "num4" : {
+      "photo" : "http://i.imgur.com/XdTsXWW.jpg",
+      "rating" : {
+        "Chrisk" : {
+          "aftertaste" : 3,
+          "aroma" : 3,
+          "presentation" : 2,
+          "taste" : 3,
+          "texture" : 5
+        },
+        "Daniel F" : {
+          "aftertaste" : 8,
+          "aroma" : 10,
+          "presentation" : 7,
+          "taste" : 8,
+          "texture" : 4
+        },
+        "Daniel To" : {
+          "aftertaste" : 5,
+          "aroma" : 7,
+          "presentation" : 3,
+          "taste" : 6,
+          "texture" : 4
+        },
+        "Esley" : {
+          "aftertaste" : 3,
+          "aroma" : 4,
+          "presentation" : 4,
+          "taste" : 4,
+          "texture" : 4
+        },
+        "Jennifer Callahan" : {
+          "aftertaste" : 7,
+          "aroma" : 7,
+          "commentary" : "Really yummy!!",
+          "presentation" : 8,
+          "taste" : 8,
+          "texture" : 7
+        },
+        "Jesiah" : {
+          "aftertaste" : 7,
+          "aroma" : 2,
+          "commentary" : "Nice aftertaste. More stew than chili",
+          "presentation" : 2,
+          "taste" : 4,
+          "texture" : 2
+        },
+        "Josh" : {
+          "aftertaste" : 8,
+          "aroma" : 4,
+          "presentation" : 6,
+          "taste" : 4,
+          "texture" : 3
+        },
+        "Kristin" : {
+          "aftertaste" : 10,
+          "aroma" : 10,
+          "presentation" : 10,
+          "taste" : 10,
+          "texture" : 10
+        },
+        "Leanne" : {
+          "aftertaste" : 1,
+          "aroma" : 2,
+          "presentation" : 2,
+          "taste" : 1,
+          "texture" : 2
+        },
+        "Tom Callahan" : {
+          "aftertaste" : 4,
+          "aroma" : 4,
+          "presentation" : 3,
+          "taste" : 6,
+          "texture" : 3
+        }
+      },
+      "title" : "#4 Turkey + Veggie Chili"
+    },
+    "num5" : {
+      "description" : "with bear (baylor) bites",
+      "photo" : "http://i.imgur.com/iR65Trt.jpg",
+      "rating" : {
+        "Amyba" : {
+          "aftertaste" : 8,
+          "aroma" : 9,
+          "presentation" : 6,
+          "taste" : 9,
+          "texture" : 7
+        },
+        "Chrisk" : {
+          "aftertaste" : 6,
+          "aroma" : 3,
+          "presentation" : 7,
+          "taste" : 6,
+          "texture" : 7
+        },
+        "Daniel F" : {
+          "aftertaste" : 7,
+          "aroma" : 10,
+          "presentation" : 8,
+          "taste" : 10,
+          "texture" : 9
+        },
+        "Daniel To" : {
+          "aftertaste" : 6,
+          "aroma" : 6,
+          "presentation" : 7,
+          "taste" : 7,
+          "texture" : 7
+        },
+        "Eirene B" : {
+          "aftertaste" : 8,
+          "aroma" : 8,
+          "presentation" : 8,
+          "taste" : 8,
+          "texture" : 8
+        },
+        "Esley" : {
+          "aftertaste" : 6,
+          "aroma" : 7,
+          "presentation" : 7,
+          "taste" : 8,
+          "texture" : 8
+        },
+        "Jennifer Callahan" : {
+          "aftertaste" : 7,
+          "aroma" : 8,
+          "commentary" : "Nice taste!",
+          "presentation" : 8,
+          "taste" : 9,
+          "texture" : 8
+        },
+        "Jesiah" : {
+          "aftertaste" : 3,
+          "aroma" : 2,
+          "commentary" : "Good all around",
+          "presentation" : 4,
+          "taste" : 3,
+          "texture" : 7
+        },
+        "Josh" : {
+          "aftertaste" : 7,
+          "aroma" : 7,
+          "presentation" : 8,
+          "taste" : 7,
+          "texture" : 5
+        },
+        "Kris F" : {
+          "aftertaste" : 9,
+          "aroma" : 8,
+          "presentation" : 8,
+          "taste" : 9,
+          "texture" : 9
+        },
+        "Kristin" : {
+          "aftertaste" : 6,
+          "aroma" : 4,
+          "presentation" : 7,
+          "taste" : 4,
+          "texture" : 2
+        },
+        "Leanne" : {
+          "aftertaste" : 1,
+          "aroma" : 0,
+          "presentation" : 0,
+          "taste" : 2,
+          "texture" : 2
+        },
+        "Paul" : {
+          "aftertaste" : 5,
+          "aroma" : 5,
+          "presentation" : 5,
+          "taste" : 5,
+          "texture" : 5
+        },
+        "Tom Callahan" : {
+          "aftertaste" : 4,
+          "aroma" : 7,
+          "presentation" : 6,
+          "taste" : 7,
+          "texture" : 5
+        }
+      },
+      "title" : "#5 Mountaineer Chili"
+    },
+    "num6" : {
+      "photo" : "http://i.imgur.com/OiraTFM.jpg",
+      "rating" : {
+        "Chrisk" : {
+          "aftertaste" : 10,
+          "aroma" : 10,
+          "presentation" : 10,
+          "taste" : 10,
+          "texture" : 10
+        },
+        "Daniel F" : {
+          "aftertaste" : 2,
+          "aroma" : 1,
+          "presentation" : 10,
+          "taste" : 2,
+          "texture" : 10
+        },
+        "Daniel To" : {
+          "aftertaste" : 6,
+          "aroma" : 7,
+          "presentation" : 7,
+          "taste" : 7,
+          "texture" : 8
+        },
+        "Jennifer Berry" : {
+          "aftertaste" : 10,
+          "aroma" : 10,
+          "commentary" : "Yum!",
+          "presentation" : 10,
+          "taste" : 10,
+          "texture" : 10
+        },
+        "Jennifer Callahan" : {
+          "aftertaste" : 6,
+          "aroma" : 6,
+          "commentary" : "Very interesting taste!",
+          "presentation" : 7,
+          "taste" : 6,
+          "texture" : 5
+        },
+        "Jesiah" : {
+          "aftertaste" : 10,
+          "aroma" : 7,
+          "commentary" : "The best",
+          "presentation" : 7,
+          "taste" : 10,
+          "texture" : 9
+        },
+        "Josh" : {
+          "aftertaste" : 8,
+          "aroma" : 9,
+          "presentation" : 8,
+          "taste" : 7,
+          "texture" : 7
+        },
+        "Kris F" : {
+          "aftertaste" : 6,
+          "aroma" : 5,
+          "presentation" : 3,
+          "taste" : 6,
+          "texture" : 6
+        },
+        "Kristin" : {
+          "aftertaste" : 2,
+          "aroma" : 6,
+          "presentation" : 9,
+          "taste" : 3,
+          "texture" : 8
+        },
+        "Leanne" : {
+          "aftertaste" : 1,
+          "aroma" : 1,
+          "presentation" : 0,
+          "taste" : 0,
+          "texture" : 1
+        },
+        "Tom Callahan" : {
+          "aftertaste" : 6,
+          "aroma" : 3,
+          "presentation" : 3,
+          "taste" : 8,
+          "texture" : 3
+        }
+      },
+      "title" : "#6 Pulled Vegan Goodness"
+    },
+    "num7" : {
+      "photo" : "http://i.imgur.com/OEpQ9wG.jpg",
+      "rating" : {
+        "Alex" : {
+          "aftertaste" : 10,
+          "aroma" : 10,
+          "presentation" : 10,
+          "taste" : 10,
+          "texture" : 10
+        },
+        "Daniel F" : {
+          "aftertaste" : 4,
+          "aroma" : 8,
+          "presentation" : 8,
+          "taste" : 7,
+          "texture" : 7
+        },
+        "Daniel To" : {
+          "aftertaste" : 6,
+          "aroma" : 6,
+          "presentation" : 7,
+          "taste" : 6,
+          "texture" : 7
+        },
+        "Esley" : {
+          "aftertaste" : 10,
+          "aroma" : 10,
+          "presentation" : 10,
+          "taste" : 10,
+          "texture" : 10
+        },
+        "Jennifer Callahan" : {
+          "aftertaste" : 6,
+          "aroma" : 8,
+          "commentary" : "Really tasty!!",
+          "presentation" : 8,
+          "taste" : 9,
+          "texture" : 8
+        },
+        "Jesiah" : {
+          "aftertaste" : 3,
+          "aroma" : 6,
+          "commentary" : "Eh",
+          "presentation" : 6,
+          "taste" : 2,
+          "texture" : 2
+        },
+        "Kristin" : {
+          "aftertaste" : 3,
+          "aroma" : 5,
+          "presentation" : 3,
+          "taste" : 2,
+          "texture" : 4
+        },
+        "Tom Callahan" : {
+          "aftertaste" : 4,
+          "aroma" : 6,
+          "presentation" : 6,
+          "taste" : 6,
+          "texture" : 6
+        },
+        "chris" : {
+          "aftertaste" : 10,
+          "aroma" : 10,
+          "presentation" : 10,
+          "taste" : 10,
+          "texture" : 10
+        }
+      },
+      "title" : "#7 Definitely not vegan camel meat chili"
+    },
+    "num8" : {
+      "photo" : "http://i.imgur.com/iR65Trt.jpg",
+      "rating" : {
+        "Alex" : {
+          "aftertaste" : 9,
+          "aroma" : 9,
+          "presentation" : 9,
+          "taste" : 9,
+          "texture" : 9
+        },
+        "Chrisk" : {
+          "aftertaste" : 7,
+          "aroma" : 4,
+          "presentation" : 5,
+          "taste" : 8,
+          "texture" : 8
+        },
+        "Daniel F" : {
+          "aftertaste" : 7,
+          "aroma" : 7,
+          "presentation" : 7,
+          "taste" : 9,
+          "texture" : 3
+        },
+        "Daniel To" : {
+          "aftertaste" : 6,
+          "aroma" : 6,
+          "presentation" : 6,
+          "taste" : 8,
+          "texture" : 7
+        },
+        "Ila G" : {
+          "aftertaste" : 6,
+          "aroma" : 8,
+          "presentation" : 6,
+          "taste" : 9,
+          "texture" : 7
+        },
+        "Jennifer Callahan" : {
+          "aftertaste" : 9,
+          "aroma" : 9,
+          "commentary" : "Very good! My fav. So far!",
+          "presentation" : 9,
+          "taste" : 10,
+          "texture" : 9
+        },
+        "Jesiah" : {
+          "aftertaste" : 2,
+          "aroma" : 7,
+          "commentary" : "Good take",
+          "presentation" : 9,
+          "taste" : 6,
+          "texture" : 2
+        },
+        "Josh" : {
+          "aftertaste" : 7,
+          "aroma" : 6,
+          "presentation" : 4,
+          "taste" : 4,
+          "texture" : 6
+        },
+        "Kris F" : {
+          "aftertaste" : 10,
+          "aroma" : 8,
+          "presentation" : 7,
+          "taste" : 10,
+          "texture" : 9
+        },
+        "Kristin" : {
+          "aftertaste" : 9,
+          "aroma" : 7,
+          "presentation" : 9,
+          "taste" : 9,
+          "texture" : 7
+        },
+        "Leanne" : {
+          "aftertaste" : 1,
+          "aroma" : 2,
+          "presentation" : 1,
+          "taste" : 2,
+          "texture" : 1
+        },
+        "Tom Callahan" : {
+          "aftertaste" : 3,
+          "aroma" : 4,
+          "presentation" : 4,
+          "taste" : 3,
+          "texture" : 4
+        }
+      },
+      "title" : "#8 White bean chicken chili"
+    },
+    "num9" : {
+      "description" : "Beef",
+      "photo" : "http://i.imgur.com/9WXukaf.jpg",
+      "rating" : {
+        "Daniel F" : {
+          "aftertaste" : 3,
+          "aroma" : 3,
+          "presentation" : 8,
+          "taste" : 3,
+          "texture" : 8
+        },
+        "Daniel To" : {
+          "aftertaste" : 6,
+          "aroma" : 5,
+          "presentation" : 6,
+          "taste" : 7,
+          "texture" : 7
+        },
+        "Jennifer Callahan" : {
+          "aftertaste" : 5,
+          "aroma" : 6,
+          "presentation" : 6,
+          "taste" : 5,
+          "texture" : 6
+        },
+        "Jesiah" : {
+          "aftertaste" : 3,
+          "aroma" : 7,
+          "commentary" : "Wonderful Classic tasting",
+          "presentation" : 10,
+          "taste" : 8,
+          "texture" : 8
+        },
+        "Kris F" : {
+          "aftertaste" : 9,
+          "aroma" : 9,
+          "presentation" : 8,
+          "taste" : 9,
+          "texture" : 8
+        },
+        "Kristin" : {
+          "aftertaste" : 5,
+          "aroma" : 9,
+          "presentation" : 2,
+          "taste" : 2,
+          "texture" : 6
+        },
+        "Olivia" : {
+          "aftertaste" : 5,
+          "aroma" : 3,
+          "presentation" : 7,
+          "taste" : 8,
+          "texture" : 7
+        },
+        "Tom Callahan" : {
+          "aftertaste" : 7,
+          "aroma" : 8,
+          "presentation" : 7,
+          "taste" : 8,
+          "texture" : 6
+        }
+      },
+      "title" : "#9 Game day chili"
+    }
+  }
+}
